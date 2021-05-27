@@ -1,0 +1,61 @@
+<mvc:View 
+  controllerName="App.controller.App" 
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns="sap.m" 
+  displayBlock="true" 
+  height="100%" 
+  busyIndicatorDelay="0"
+>
+  <Page title="Carrello">
+    <content>
+      <ScrollContainer >
+        <Table items="{/products}">
+          <columns>
+            <Column width="10rem">
+              <Label text="Product ID" />
+            </Column>
+            <Column width="10rem">
+              <Label text="Product Name" />
+            </Column>
+            <Column width="10rem">
+              <Label text="Product Description" />
+            </Column>
+            <Column width="10rem">
+              <Label text="Price" />
+            </Column>
+            <Column width="10rem">
+              <Label text="Image" />
+            </Column>
+            <Column width="10rem">
+              <Label text="Category" />
+            </Column>
+            <Column width="10rem">
+              <Label text="Weight"/>
+            </Column>
+            <Column width="10rem">
+              <Label text="Dimension"/>
+            </Column>
+          </columns>
+          <items>
+            <ColumnListItem >
+              <customData>
+                <core:CustomData key="background" value="{name}" writeToDom="true" />
+              </customData>
+              <cells>
+                <Text text="{id}"/>
+                <Text text="{name}"/>
+                <Text text="{description}"/>
+                <ObjectNumber number="{price} - {currency}"/>
+                <Image width="8rem" src="{image}"/>
+                <Text text="{category}"/>
+                <Text text="{weight}"/>
+                <Text text="{dimension}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </ScrollContainer>
+    </content>
+  </Page>
+</mvc:View>
