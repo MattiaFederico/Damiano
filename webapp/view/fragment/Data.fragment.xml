@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <SelectDialog title="Utenti" 
+    class="sapUiPopupWithPadding" 
+    items="{dummy>/userData}" 
+    multiSelect="true"
+    confirm="onConfirm">
+    <StandardListItem title="{dummy>name}"/>
+  </SelectDialog>
+</core:FragmentDefinition>
